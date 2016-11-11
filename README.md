@@ -26,6 +26,12 @@ Android project to experiment various testing tools
 - https://github.com/MarkusAmshove/Kluent
 - https://github.com/winterbe/expekt
 
-# IDE configuration
+## Android
+
+### Robotium
+
+- https://github.com/RobotiumTech/robotium
+
+## IDE configuration
 
 - MoreUnit plugin:  https://plugins.jetbrains.com/plugin/7105
