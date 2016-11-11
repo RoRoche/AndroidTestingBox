@@ -2,24 +2,24 @@
 
 Android project to experiment various testing tools
 
- ## JUnit
+## JUnit
 
- ### Frutilla
+### Frutilla
 
 - https://github.com/ignaciotcrespo/frutilla
 
- ### Fluent test method names
+### Fluent test method names
 
 - https://jijeshmohan.wordpress.com/2011/12/17/junit-readable-test-names/
 
- ## Kotlin 
+## Kotlin 
 
- ### Specifications framework: Spek
+### Specifications framework: Spek
 
 - https://github.com/JetBrains/spek
 - http://jetbrains.github.io/spek/docs/latest/#setting-up
 
- ### Fluent assertions
+### Fluent assertions
 
 - https://github.com/MarkusAmshove/Kluent
 - https://github.com/winterbe/expekt
