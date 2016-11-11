@@ -2,6 +2,8 @@
 
 Android project to experiment various testing tools
 
+[![Dependency Status](https://www.versioneye.com/user/projects/58261d9e7a72950483fd3428/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58261d9e7a72950483fd3428)
+
 ## JUnit
 
 ### Frutilla
