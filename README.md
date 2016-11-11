@@ -1,7 +1,7 @@
 # AndroidTestingBox
 
 Android project to experiment various testing tools.
-It target **Java** and **Kotlin** languages.
+It targets **Java** and **Kotlin** languages.
 Priority is given to fluency and ease of use.
 The idea is to provide a toolbox to write elegant and intelligible tests, with modern techniques like **behavior-driven testing frameworks** or **fluent assertions**.
 
