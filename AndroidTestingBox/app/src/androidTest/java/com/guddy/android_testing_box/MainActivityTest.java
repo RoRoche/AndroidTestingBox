@@ -11,7 +11,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.assertTrue;
+import static com.google.common.truth.Truth.assertThat;
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
@@ -55,7 +55,7 @@ public class MainActivityTest {
         Then:
         {
             final boolean lbFoundTheRepo = mSolo.waitForText(mContextTarget.getString(R.string.app_name), 1, 5000L, true);
-            assertTrue(lbFoundTheRepo);
+            assertThat(lbFoundTheRepo).isTrue();
         }
     }
     //endregion

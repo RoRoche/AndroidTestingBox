@@ -9,7 +9,7 @@ import org.junit.platform.runner.JUnitPlatform
 import org.junit.runner.RunWith
 
 @RunWith(JUnitPlatform::class)
-class KSumTest : Spek({
+class SpekSumTest : Spek({
 
     given("two numbers a = 1 and b = 3") {
         val a: Int = 1

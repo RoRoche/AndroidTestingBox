@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'me.tatarka.retrolambda'
 
 buildscript {
     repositories {
@@ -8,6 +9,7 @@ buildscript {
     }
     dependencies {
         classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M2'
+        classpath 'me.tatarka:gradle-retrolambda:3.3.1'
     }
 }
 
@@ -36,6 +38,10 @@ android {
         test.java.srcDirs += 'src/test/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -52,6 +58,9 @@ dependencies {
     testCompile 'org.jetbrains.spek:spek-junit-platform-engine:1.0.89'
     testCompile 'org.junit.platform:junit-platform-runner:1.0.0-M2'
     testCompile 'org.amshove.kluent:kluent:1.8'
+    testCompile 'com.google.truth:truth:0.30'
+    testCompile 'com.greghaskins:spectrum:0.7.1'
+    testCompile 'com.github.ignaciotcrespo:frutilla:0.7.1'
 
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -71,4 +80,5 @@ dependencies {
     androidTestCompile('com.android.support.test:rules:0.5') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
+    androidTestCompile 'com.google.truth:truth:0.30'
 }
