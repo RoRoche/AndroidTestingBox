@@ -14,6 +14,17 @@ Android project to experiment various testing tools
 
 - https://jijeshmohan.wordpress.com/2011/12/17/junit-readable-test-names/
 
+### Fluent assertions : truth
+
+- https://google.github.io/truth/
+
+### Specifications framework: Spectrum
+
+- https://github.com/greghaskins/spectrum
+- http://www.greghaskins.com/archive/introducing-spectrum-bdd-style-test-runner-for-java-junit
+
+#### Alternative: Oleaster (https://github.com/mscharhag/oleaster)
+
 ## Kotlin 
 
 ### Specifications framework: Spek
@@ -21,10 +32,11 @@ Android project to experiment various testing tools
 - https://github.com/JetBrains/spek
 - http://jetbrains.github.io/spek/docs/latest/#setting-up
 
-### Fluent assertions
+### Fluent assertions: Kulent
 
 - https://github.com/MarkusAmshove/Kluent
-- https://github.com/winterbe/expekt
+
+#### Alternative: Expekt (https://github.com/winterbe/expekt)
 
 ## Android
 
@@ -35,3 +47,7 @@ Android project to experiment various testing tools
 ## IDE configuration
 
 - MoreUnit plugin:  https://plugins.jetbrains.com/plugin/7105
+
+# Nota Bene
+
+A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mockito](http://site.mockito.org/) is already described in a previous post I wrote: http://roroche.github.io/AndroidStarter/
