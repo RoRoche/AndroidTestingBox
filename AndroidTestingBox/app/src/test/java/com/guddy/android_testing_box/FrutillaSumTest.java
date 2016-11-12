@@ -1,10 +1,17 @@
 package com.guddy.android_testing_box;
 
+import com.guddy.android_testing_box.bdd.Given;
+import com.guddy.android_testing_box.bdd.Then;
+import com.guddy.android_testing_box.bdd.When;
+
 import org.frutilla.annotations.Frutilla;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static com.google.common.truth.Truth.assertThat;
+import static com.guddy.android_testing_box.bdd.Given.given;
+import static com.guddy.android_testing_box.bdd.When.when;
+import static com.guddy.android_testing_box.bdd.Then.then;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -21,23 +28,17 @@ public class FrutillaSumTest {
     )
     @Test
     public void addition_isCorrect() throws Exception {
-        final int a;
-        final int b;
-        Given:
-        {
-            a = 1;
-            b = 3;
-        }
+        given("two numbers", new Given(() -> {
+            final int a = 1;
+            final int b = 3;
 
-        final Sum sum;
-        When:
-        {
-            sum = new Sum(a, b);
-        }
+            when("computing the sum of these 2 numbers", new When(() ->{
+                final Sum sum = new Sum(a, b);
 
-        Then:
-        {
-            assertThat(sum.getSum()).isEqualTo(4);
-        }
+                then("should compute sum = 4", new Then(() -> {
+                    assertThat(sum.getSum()).isEqualTo(4);
+                }));
+            }));
+        }));
     }
 }
