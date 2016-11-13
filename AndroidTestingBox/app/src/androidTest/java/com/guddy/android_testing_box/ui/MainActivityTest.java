@@ -1,10 +1,14 @@
-package com.guddy.android_testing_box;
+package com.guddy.android_testing_box.ui;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+
+import com.guddy.android_testing_box.MainActivity;
+import com.guddy.android_testing_box.R;
 import com.robotium.solo.Solo;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -12,6 +16,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static com.google.common.truth.Truth.assertThat;
+import static com.guddy.android_testing_box.bdd.BddCanvas.given;
+import static com.guddy.android_testing_box.bdd.BddCanvas.then;
+import static com.guddy.android_testing_box.bdd.BddCanvas.when;
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
@@ -42,21 +49,18 @@ public class MainActivityTest {
 
     //region Test methods
     @Test
-    public void testTextDisplayed() {
-        Given:
-        {
-            mActivity = mActivityTestRule.launchActivity(null);
-        }
+    public void testTextDisplayed() throws Exception {
+        given("the main activity", () -> {
 
-        When:
-        {
-        }
+            when("launching activity", () -> {
+                mActivity = mActivityTestRule.launchActivity(null);
 
-        Then:
-        {
-            final boolean lbFoundTheRepo = mSolo.waitForText(mContextTarget.getString(R.string.app_name), 1, 5000L, true);
-            assertThat(lbFoundTheRepo).isTrue();
-        }
+                then("should display 'app_name'", () -> {
+                    final boolean lbFoundTheRepo = mSolo.waitForText(mContextTarget.getString(R.string.app_name), 1, 5000L, true);
+                    assertThat(lbFoundTheRepo);
+                });
+            });
+        });
     }
     //endregion
 }
