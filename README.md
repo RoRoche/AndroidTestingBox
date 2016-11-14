@@ -35,7 +35,7 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 - https://github.com/JetBrains/spek
 - http://jetbrains.github.io/spek/docs/latest/#setting-up
 
-### Fluent assertions: Kulent
+### Fluent assertions: Kluent
 
 - https://github.com/MarkusAmshove/Kluent
 
