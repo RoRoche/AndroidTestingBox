@@ -6,6 +6,7 @@ Priority is given to fluency and ease of use.
 The idea is to provide a toolbox to write elegant and intelligible tests, with modern techniques like **behavior-driven testing frameworks** or **fluent assertions**.
 
 [![Dependency Status](https://www.versioneye.com/user/projects/58261d9e7a72950483fd3428/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58261d9e7a72950483fd3428)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidTestingBox-brightgreen.svg?style=flat)]()
 
 ## JUnit
 
