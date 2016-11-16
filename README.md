@@ -29,6 +29,10 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 
 #### Alternative: Oleaster (https://github.com/mscharhag/oleaster)
 
+### Hierarchies in JUnit: junit-hierarchicalcontextrunner
+
+- https://github.com/bechte/junit-hierarchicalcontextrunner
+
 ## Kotlin 
 
 ### Specifications framework: Spek
@@ -55,3 +59,8 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 # Nota Bene
 
 A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mockito](http://site.mockito.org/) is already described in a previous post I wrote: http://roroche.github.io/AndroidStarter/
+
+# Bibliography
+
+- https://blog.codecentric.de/en/2016/01/writing-better-tests-junit/
+- https://www.petrikainulainen.net/programming/unit-testing/3-reasons-why-we-should-not-use-inheritance-in-our-tests/
