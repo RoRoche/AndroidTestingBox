@@ -72,6 +72,7 @@ dependencies {
     testCompile 'com.github.ignaciotcrespo:frutilla:0.7.1'
     testCompile 'de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1'
     testCompile 'com.tngtech.jgiven:jgiven-junit:0.12.1'
+    testCompile 'com.tngtech.jgiven:jgiven-html5-report:0.12.1'
 
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -93,4 +94,11 @@ dependencies {
     }
     androidTestCompile 'com.google.truth:truth:0.30'
     androidTestCompile 'de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1'
+}
+
+task jgivenReport(type: JavaExec, dependsOn: 'test') {
+    main = 'com.tngtech.jgiven.report.ReportGenerator'
+    args '--targetDir=target/jgiven-reports/html',
+            '--format=html'
+    classpath = configurations.testCompile
 }
