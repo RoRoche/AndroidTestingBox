@@ -1,13 +1,11 @@
 package com.guddy.android_testing_box
 
+import com.google.common.truth.Truth.assertThat
+import de.bechte.junit.runners.context.HierarchicalContextRunner
 import org.apache.commons.lang3.concurrent.ConcurrentException
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import de.bechte.junit.runners.context.HierarchicalContextRunner
-
-import com.google.common.truth.Truth.assertThat
 
 @RunWith(HierarchicalContextRunner::class)
 class KHCRSumTest {
