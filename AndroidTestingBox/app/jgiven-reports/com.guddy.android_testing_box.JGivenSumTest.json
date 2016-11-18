@@ -1,0 +1,106 @@
+{
+  "className": "com.guddy.android_testing_box.JGivenSumTest",
+  "name": "J Given Sum",
+  "scenarios": [
+    {
+      "className": "com.guddy.android_testing_box.JGivenSumTest",
+      "testMethodName": "addition_isCorrect",
+      "description": "addition isCorrect",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "first number $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "first number"
+                },
+                {
+                  "value": "1",
+                  "argumentInfo": {
+                    "argumentName": "piA",
+                    "formattedValue": "1"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 21109057
+            },
+            {
+              "name": "second number $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "second number"
+                },
+                {
+                  "value": "3",
+                  "argumentInfo": {
+                    "argumentName": "piB",
+                    "formattedValue": "3"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 415481
+            },
+            {
+              "name": "computing sum",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "computing sum"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 74218
+            },
+            {
+              "name": "it should be $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "it should be"
+                },
+                {
+                  "value": "4",
+                  "argumentInfo": {
+                    "argumentName": "piExpected",
+                    "formattedValue": "4"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 357258
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "success": true,
+          "durationInNanos": 62164487
+        }
+      ],
+      "durationInNanos": 62164487,
+      "executionStatus": "SUCCESS"
+    }
+  ],
+  "tagMap": {}
+}
