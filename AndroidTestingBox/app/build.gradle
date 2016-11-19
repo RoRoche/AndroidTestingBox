@@ -98,7 +98,8 @@ dependencies {
 
 task jgivenReport(type: JavaExec, dependsOn: 'test') {
     main = 'com.tngtech.jgiven.report.ReportGenerator'
-    args '--targetDir=target/jgiven-reports/html',
+    args '--sourceDir=jgiven-reports',
+            '--targetDir=jgiven-reports/html',
             '--format=html'
     classpath = configurations.testCompile
 }

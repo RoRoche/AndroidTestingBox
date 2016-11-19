@@ -33,7 +33,7 @@
                 }
               ],
               "status": "PASSED",
-              "durationInNanos": 14031952
+              "durationInNanos": 12327904
             },
             {
               "name": "second number $",
@@ -54,7 +54,7 @@
                 }
               ],
               "status": "PASSED",
-              "durationInNanos": 600846
+              "durationInNanos": 513954
             },
             {
               "name": "computing sum",
@@ -68,7 +68,7 @@
                 }
               ],
               "status": "PASSED",
-              "durationInNanos": 86156
+              "durationInNanos": 77749
             },
             {
               "name": "it should be $",
@@ -89,16 +89,16 @@
                 }
               ],
               "status": "PASSED",
-              "durationInNanos": 456991
+              "durationInNanos": 416914
             }
           ],
           "explicitArguments": [],
           "derivedArguments": [],
           "success": true,
-          "durationInNanos": 68421875
+          "durationInNanos": 56557383
         }
       ],
-      "durationInNanos": 68421875,
+      "durationInNanos": 56557383,
       "executionStatus": "SUCCESS"
     }
   ],
