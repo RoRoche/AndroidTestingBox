@@ -33,6 +33,10 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 
 - https://github.com/bechte/junit-hierarchicalcontextrunner
 
+### BDD tool: JGiven
+
+- http://jgiven.org/
+
 ## Kotlin 
 
 ### Specifications framework: Spek
@@ -64,3 +68,9 @@ A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mocki
 
 - https://blog.codecentric.de/en/2016/01/writing-better-tests-junit/
 - https://www.petrikainulainen.net/programming/unit-testing/3-reasons-why-we-should-not-use-inheritance-in-our-tests/
+
+# Interesting repositories
+
+- https://github.com/googlesamples/android-testing
+- https://github.com/TNG/JGiven/tree/master/jgiven-examples
+- https://github.com/ahus1/bdd-examples
