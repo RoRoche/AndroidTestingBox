@@ -18,9 +18,11 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 
 - https://jijeshmohan.wordpress.com/2011/12/17/junit-readable-test-names/
 
-### Fluent assertions : truth
+### Fluent assertions: truth
 
 - https://google.github.io/truth/
+
+#### Alternative: AssertJ (http://joel-costigliola.github.io/assertj/)
 
 ### Specifications framework: Spectrum
 
@@ -50,7 +52,13 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 
 #### Alternative: Expekt (https://github.com/winterbe/expekt)
 
+### Alternative to JUnit: TestNG (http://testng.org/doc/index.html)
+
 ## Android
+
+### Fluent assertions: AssertJ Android
+
+- http://square.github.io/assertj-android/
 
 ### Robotium
 
