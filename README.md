@@ -39,6 +39,11 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 
 - http://jgiven.org/
 
+### Mutation testing: Zester plugin
+
+- https://plugins.jetbrains.com/plugin/8281
+- https://tech.zalando.com/blog/zester-mutation-testing/
+
 ## Kotlin 
 
 ### Specifications framework: Spek
@@ -76,6 +81,7 @@ A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mocki
 
 - https://blog.codecentric.de/en/2016/01/writing-better-tests-junit/
 - https://www.petrikainulainen.net/programming/unit-testing/3-reasons-why-we-should-not-use-inheritance-in-our-tests/
+- http://blog.xebia.com/mutation-testing-how-good-are-your-unit-tests/
 
 # Interesting repositories
 
