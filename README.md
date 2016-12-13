@@ -44,6 +44,15 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 - https://plugins.jetbrains.com/plugin/8281
 - https://tech.zalando.com/blog/zester-mutation-testing/
 
+For this sample project, define a new "Run configuration" with Zester such as:
+
+```
+Target classes: com.guddy.android_testing_box.zester.*
+Test class: com.guddy.android_testing_box.zester.ZesterExampleTest
+```
+
+It generates an HTML report in the `build/reports/zester/` directory, showing that 2 "mutants" survived to unit tests (so potential bugs, and in this case, yes it is).
+
 ## Kotlin 
 
 ### Specifications framework: Spek
