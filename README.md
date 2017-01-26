@@ -84,13 +84,13 @@ class MainActivity : AppCompatActivity() {
 
 ### Fluent assertions: truth
 
-- https://google.github.io/truth/
+- <https://google.github.io/truth/>
 
-#### Alternative: AssertJ (http://joel-costigliola.github.io/assertj/)
+#### Alternative: AssertJ (<http://joel-costigliola.github.io/assertj/>)
 
 ### Frutilla
 
-- https://github.com/ignaciotcrespo/frutilla
+- <https://github.com/ignaciotcrespo/frutilla>
 
 ```java
 @RunWith(value = org.frutilla.FrutillaTestRunner.class)
@@ -119,12 +119,12 @@ public class FrutillaSumTest {
 
 ### Fluent test method names
 
-- https://jijeshmohan.wordpress.com/2011/12/17/junit-readable-test-names/
+- <https://jijeshmohan.wordpress.com/2011/12/17/junit-readable-test-names/>
 
 ### Specifications framework: Spectrum
 
-- https://github.com/greghaskins/spectrum
-- http://www.greghaskins.com/archive/introducing-spectrum-bdd-style-test-runner-for-java-junit
+- <https://github.com/greghaskins/spectrum>
+- <http://www.greghaskins.com/archive/introducing-spectrum-bdd-style-test-runner-for-java-junit>
 
 ```java
 import static com.google.common.truth.Truth.assertThat;
@@ -148,11 +148,11 @@ public class SpectrumSumTest {
 }
 ```
 
-#### Alternative: Oleaster (https://github.com/mscharhag/oleaster)
+#### Alternative: Oleaster (<https://github.com/mscharhag/oleaster>)
 
 ### Hierarchies in JUnit: junit-hierarchicalcontextrunner
 
-- https://github.com/bechte/junit-hierarchicalcontextrunner
+- <https://github.com/bechte/junit-hierarchicalcontextrunner>
 
 ```java
 @RunWith(HierarchicalContextRunner.class)
@@ -201,7 +201,7 @@ public class HCRSumTest {
 
 ### BDD tool: JGiven
 
-- http://jgiven.org/
+- <http://jgiven.org/>
 
 ```java
 public class JGivenSumTest extends SimpleScenarioTest<JGivenSumTest.TestSteps> {
@@ -240,8 +240,8 @@ public class JGivenSumTest extends SimpleScenarioTest<JGivenSumTest.TestSteps> {
 
 ### Mutation testing: Zester plugin
 
-- https://plugins.jetbrains.com/plugin/8281
-- https://tech.zalando.com/blog/zester-mutation-testing/
+- <https://plugins.jetbrains.com/plugin/8281>
+- <https://tech.zalando.com/blog/zester-mutation-testing/>
 
 For this sample project, define a new "Run configuration" with Zester such as:
 
@@ -256,14 +256,14 @@ It generates an HTML report in the `build/reports/zester/` directory, showing th
 
 ### Fluent assertions: Kluent
 
-- https://github.com/MarkusAmshove/Kluent
+- <https://github.com/MarkusAmshove/Kluent>
 
-#### Alternative: Expekt (https://github.com/winterbe/expekt)
+#### Alternative: Expekt (<https://github.com/winterbe/expekt>)
 
 ### Specifications framework: Spek
 
-- https://github.com/JetBrains/spek
-- http://jetbrains.github.io/spek/docs/latest/#setting-up
+- <https://github.com/JetBrains/spek>
+- <http://jetbrains.github.io/spek/docs/latest/#setting-up>
 
 ```kotlin
 @RunWith(JUnitPlatform::class)
@@ -284,17 +284,17 @@ class SpekSumTest : Spek({
 })
 ```
 
-### Alternative to JUnit: TestNG (http://testng.org/doc/index.html)
+### Alternative to JUnit: TestNG (<http://testng.org/doc/index.html>)
 
 ## Android
 
 ### Fluent assertions: AssertJ Android
 
-- http://square.github.io/assertj-android/
+- <http://square.github.io/assertj-android/>
 
 ### Robotium
 
-- https://github.com/RobotiumTech/robotium
+- <https://github.com/RobotiumTech/robotium>
 
 ```java
 @RunWith(AndroidJUnit4.class)
@@ -345,12 +345,12 @@ public class MainActivityTest {
 
 ### Espresso
 
-- https://google.github.io/android-testing-support-library/docs/espresso/
+- <https://google.github.io/android-testing-support-library/docs/espresso/>
 
 ### JGiven support
 
-- http://jgiven.org/userguide/#_android
-- https://github.com/TNG/JGiven/tree/master/example-projects/android
+- <http://jgiven.org/userguide/#_android>
+- <https://github.com/TNG/JGiven/tree/master/example-projects/android>
 
 ```java
 @RunWith(AndroidJUnit4.class)
@@ -410,29 +410,29 @@ public class EspressoJGivenMainActivityTest extends
 
 ## IDE configuration
 
-- MoreUnit plugin:  https://plugins.jetbrains.com/plugin/7105
+- MoreUnit plugin:  <https://plugins.jetbrains.com/plugin/7105>
 
 # Nota Bene
 
-A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mockito](http://site.mockito.org/) is already described in a previous post I wrote: http://roroche.github.io/AndroidStarter/
+A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mockito](http://site.mockito.org/) is already described in a previous post I wrote: <http://roroche.github.io/AndroidStarter/>
 
 # Bibliography
 
-- https://blog.codecentric.de/en/2016/01/writing-better-tests-junit/
-- https://www.petrikainulainen.net/programming/unit-testing/3-reasons-why-we-should-not-use-inheritance-in-our-tests/
-- http://blog.xebia.com/mutation-testing-how-good-are-your-unit-tests/
+- <https://blog.codecentric.de/en/2016/01/writing-better-tests-junit/>
+- <https://www.petrikainulainen.net/programming/unit-testing/3-reasons-why-we-should-not-use-inheritance-in-our-tests/>
+- <http://blog.xebia.com/mutation-testing-how-good-are-your-unit-tests/>
 
 # Interesting repositories
 
-- https://github.com/googlesamples/android-testing
-- https://github.com/TNG/JGiven/tree/master/jgiven-examples
-- https://github.com/ahus1/bdd-examples
+- <https://github.com/googlesamples/android-testing>
+- <https://github.com/TNG/JGiven/tree/master/jgiven-examples>
+- <https://github.com/ahus1/bdd-examples>
 
 # Intersting articles
 
-- https://www.sitepoint.com/property-based-testing-with-javaslang/
+- <https://www.sitepoint.com/property-based-testing-with-javaslang/>
 
 # Resources
 
-- https://www.petrikainulainen.net/writing-clean-tests/
-- https://www.petrikainulainen.net/category/weekly/
+- <https://www.petrikainulainen.net/writing-clean-tests/>
+- <https://www.petrikainulainen.net/category/weekly/>
