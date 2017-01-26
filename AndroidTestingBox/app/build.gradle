@@ -15,7 +15,7 @@ buildscript {
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "com.guddy.android_testing_box"
@@ -24,6 +24,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -53,8 +54,14 @@ android {
     }
 }
 
+configurations {
+    jgivenReport
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.android.support:multidex:1.0.1'
 
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -73,6 +80,11 @@ dependencies {
     testCompile 'de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1'
     testCompile 'com.tngtech.jgiven:jgiven-junit:0.12.1'
     testCompile 'com.tngtech.jgiven:jgiven-html5-report:0.12.1'
+
+    androidTestCompile 'com.tngtech.jgiven:jgiven-android:0.14.0-RC1'
+
+    jgivenReport 'com.tngtech.jgiven:jgiven-html5-report:0.14.0-RC1'
+    jgivenReport 'org.slf4j:slf4j-simple:1.7.21'
 
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -96,10 +108,67 @@ dependencies {
     androidTestCompile 'de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1'
 }
 
+// jgiven for unit testing
+
 task jgivenReport(type: JavaExec, dependsOn: 'test') {
     main = 'com.tngtech.jgiven.report.ReportGenerator'
     args '--sourceDir=jgiven-reports',
             '--targetDir=jgiven-reports/html',
             '--format=html'
     classpath = configurations.testCompile
+}
+
+// jgiven for UI testing
+
+def targetDir = 'build/reports/jgiven/json'
+def adb = android.getAdbExe().toString()
+def reportsDir = '/storage/emulated/0/Download/jgiven-reports'
+
+task cleanJGivenReports(type: Delete) {
+    delete targetDir
+}
+
+task pullJGivenReports(type: Exec, dependsOn: cleanJGivenReports) {
+    doFirst {
+        if (!file(targetDir).mkdirs()) {
+            println("Cannot create dir "+targetDir)
+        }
+    }
+
+    commandLine adb, 'pull', reportsDir, targetDir
+
+    doLast {
+        println("Pulled "+reportsDir+" to "+targetDir);
+    }
+}
+
+task cleanJGivenReportsFromDevice(type: Exec) {
+    commandLine adb, 'shell', 'rm -rf', reportsDir
+
+    doLast {
+        println("Deleted "+reportsDir)
+    }
+}
+
+pullJGivenReports.finalizedBy(cleanJGivenReportsFromDevice)
+
+task cleanJGivenHtmlReport(type: Delete) {
+    delete 'build/reports/jgiven/html'
+}
+
+task jgivenHtml5Report(type: JavaExec, dependsOn: cleanJGivenHtmlReport) {
+    main = 'com.tngtech.jgiven.report.ReportGenerator'
+    args '--sourceDir=build/reports/jgiven/json',
+            '--targetDir=build/reports/jgiven/html',
+            '--format=html5',
+            '--exclude-empty-scenarios=true'
+    classpath = configurations.jgivenReport
+}
+
+pullJGivenReports.finalizedBy(jgivenHtml5Report)
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'connectedAndroidTest') {
+        task.finalizedBy 'pullJGivenReports'
+    }
 }

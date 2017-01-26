@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidTestingBox</string>
+    <string name="click_me">Click me</string>
+    <string name="text_changed_after_button_click">Text changed after button click</string>
 </resources>

@@ -56,8 +56,8 @@ public class MainActivityTest {
                 mActivity = mActivityTestRule.launchActivity(null);
 
                 then("should display 'app_name'", () -> {
-                    final boolean lbFoundTheRepo = mSolo.waitForText(mContextTarget.getString(R.string.app_name), 1, 5000L, true);
-                    assertThat(lbFoundTheRepo);
+                    final boolean lbFoundAppName = mSolo.waitForText(mContextTarget.getString(R.string.app_name), 1, 5000L, true);
+                    assertThat(lbFoundAppName);
                 });
             });
         });

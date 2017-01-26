@@ -18,7 +18,7 @@ public class FrutillaSumTest {
             Then = "should compute sum = 4"
     )
     @Test
-    public void addition_isCorrect() throws Exception {
+    public void test_addition_isCorrect() throws Exception {
         given("two numbers", () -> {
             final int a = 1;
             final int b = 3;
