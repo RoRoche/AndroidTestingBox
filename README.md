@@ -6,6 +6,11 @@ Priority is given to fluency and ease of use.
 The idea is to provide a toolbox to write elegant and intelligible tests, with modern techniques like **behavior-driven testing frameworks** or **fluent assertions**.
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidTestingBox-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/4658)
+[![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23242-green.svg)](http://androidweekly.net/issues/issue-242)
+
+## AndroidTestingBox in the news
+
+* [Android Weekly #242](http://androidweekly.net/issues/issue-242)
 
 ## System under test (SUT)
 
@@ -428,7 +433,7 @@ A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mocki
 - <https://github.com/TNG/JGiven/tree/master/jgiven-examples>
 - <https://github.com/ahus1/bdd-examples>
 
-# Intersting articles
+# Interesting articles
 
 - <https://www.sitepoint.com/property-based-testing-with-javaslang/>
 
