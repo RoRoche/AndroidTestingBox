@@ -80,6 +80,10 @@ dependencies {
     testCompile 'de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1'
     testCompile 'com.tngtech.jgiven:jgiven-junit:0.12.1'
     testCompile 'com.tngtech.jgiven:jgiven-html5-report:0.12.1'
+    testCompile 'org.robolectric:robolectric:3.2.2'
+    testCompile 'org.robolectric:shadows-multidex:3.2.2'
+    testCompile 'org.robolectric:shadows-support-v4:3.2.2'
+    testCompile 'org.khronos:opengl-api:gl1.1-android-2.1_r1'
 
     androidTestCompile 'com.tngtech.jgiven:jgiven-android:0.14.0-RC1'
 

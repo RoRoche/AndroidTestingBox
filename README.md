@@ -352,6 +352,42 @@ public class MainActivityTest {
 
 - <https://google.github.io/android-testing-support-library/docs/espresso/>
 
+### Robolectric
+
+- <http://robolectric.org/>
+- <http://robolectric.org/using-add-on-modules/> 
+
+```groovy
+    testCompile 'org.robolectric:robolectric:3.2.2'
+    testCompile 'org.robolectric:shadows-multidex:3.2.2'
+    testCompile 'org.robolectric:shadows-support-v4:3.2.2'
+    testCompile 'org.khronos:opengl-api:gl1.1-android-2.1_r1'
+```
+
+```java
+@RunWith(RobolectricTestRunner.class)
+@Config(constants = BuildConfig.class)
+public class RobolectricMainActivityTest {
+
+    @Test
+    public void test_clickingButton_shouldChangeText() throws Exception {
+
+        given("The MainActivity", () -> {
+            final MainActivity loActivity = Robolectric.setupActivity(MainActivity.class);
+            final Button loButton = (Button) loActivity.findViewById(R.id.ActivityMain_Button);
+            final TextView loTextView = (TextView) loActivity.findViewById(R.id.ActivityMain_TextView);
+
+            when("clicking on the button", () -> {
+                loButton.performClick();
+
+                then("text should have changed", () -> assertThat(loTextView.getText().toString()).isEqualTo("Text changed after button click"));
+            });
+        });
+    }
+
+}
+```
+
 ### JGiven support
 
 - <http://jgiven.org/userguide/#_android>
