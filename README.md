@@ -7,6 +7,7 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AndroidTestingBox-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/4658)
 [![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23242-green.svg)](http://androidweekly.net/issues/issue-242)
+[![Dependency Status](https://www.versioneye.com/user/projects/58b85f8401b5b7003a2129e7/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58b85f8401b5b7003a2129e7)
 
 ## AndroidTestingBox in the news
 
