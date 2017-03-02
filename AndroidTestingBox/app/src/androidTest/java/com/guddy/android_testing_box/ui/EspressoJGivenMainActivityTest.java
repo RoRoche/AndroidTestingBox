@@ -33,7 +33,7 @@ public class EspressoJGivenMainActivityTest extends
     public ActivityTestRule<MainActivity> activityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Rule
-    public AndroidJGivenTestRule androidJGivenTestRule = new AndroidJGivenTestRule(this.getScenario());
+    public AndroidJGivenTestRule androidJGivenTestRule = new AndroidJGivenTestRule(getScenario());
 
     @Test
     public void clicking_ClickMe_changes_the_text() {

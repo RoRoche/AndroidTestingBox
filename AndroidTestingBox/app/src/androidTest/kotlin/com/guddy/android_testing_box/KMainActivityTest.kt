@@ -1,4 +1,4 @@
-package com.example.fx12946.myapplication
+package com.guddy.android_testing_box
 
 import android.content.Context
 import android.support.test.InstrumentationRegistry

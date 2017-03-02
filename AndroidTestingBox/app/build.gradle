@@ -72,23 +72,23 @@ dependencies {
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
     testCompile 'org.jetbrains.spek:spek-api:1.0.89'
     testCompile 'org.jetbrains.spek:spek-junit-platform-engine:1.0.89'
-    testCompile 'org.junit.platform:junit-platform-runner:1.0.0-M2'
+    testCompile 'org.junit.platform:junit-platform-runner:1.0.0-M3'
     testCompile 'org.amshove.kluent:kluent:1.8'
-    testCompile 'com.google.truth:truth:0.30'
+    testCompile 'com.google.truth:truth:0.32'
     testCompile 'com.greghaskins:spectrum:0.7.1'
     testCompile 'com.github.ignaciotcrespo:frutilla:0.7.1'
     testCompile 'de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1'
-    testCompile 'com.tngtech.jgiven:jgiven-junit:0.12.1'
-    testCompile 'com.tngtech.jgiven:jgiven-html5-report:0.12.1'
+    testCompile 'com.tngtech.jgiven:jgiven-junit:0.14.1'
+    testCompile 'com.tngtech.jgiven:jgiven-html5-report:0.14.1'
     testCompile 'org.robolectric:robolectric:3.2.2'
     testCompile 'org.robolectric:shadows-multidex:3.2.2'
     testCompile 'org.robolectric:shadows-support-v4:3.2.2'
     testCompile 'org.khronos:opengl-api:gl1.1-android-2.1_r1'
 
-    androidTestCompile 'com.tngtech.jgiven:jgiven-android:0.14.0-RC1'
+    androidTestCompile 'com.tngtech.jgiven:jgiven-android:0.14.1'
 
-    jgivenReport 'com.tngtech.jgiven:jgiven-html5-report:0.14.0-RC1'
-    jgivenReport 'org.slf4j:slf4j-simple:1.7.21'
+    jgivenReport 'com.tngtech.jgiven:jgiven-html5-report:0.14.1'
+    jgivenReport 'org.slf4j:slf4j-simple:1.7.24'
 
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -108,7 +108,7 @@ dependencies {
     androidTestCompile('com.android.support.test:rules:0.5') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestCompile 'com.google.truth:truth:0.30'
+    androidTestCompile 'com.google.truth:truth:0.32'
     androidTestCompile 'de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1'
 }
 
