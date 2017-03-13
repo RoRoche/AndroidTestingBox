@@ -84,6 +84,8 @@ dependencies {
     testCompile 'org.robolectric:shadows-multidex:3.2.2'
     testCompile 'org.robolectric:shadows-support-v4:3.2.2'
     testCompile 'org.khronos:opengl-api:gl1.1-android-2.1_r1'
+    testCompile 'info.cukes:cucumber-java:1.2.5'
+    testCompile 'info.cukes:cucumber-junit:1.2.5'
 
     androidTestCompile 'com.tngtech.jgiven:jgiven-android:0.14.1'
 

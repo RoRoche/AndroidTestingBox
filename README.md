@@ -205,7 +205,72 @@ public class HCRSumTest {
 }
 ```
 
-### BDD tool: JGiven
+### BDD tools
+
+#### Cucumber
+
+- <https://cucumber.io/>
+
+* Define the `.feature` file
+
+```gherkin
+Feature: Sum computation
+
+  Scenario: Sum 2 positive integers
+    Given two int 1 and 3 to sum
+    When computing sum
+    Then it should be 4
+
+  Scenario: Sum 2 negative integers
+    Given two int -1 and -3 to sum
+    When computing sum
+    Then it should be -4
+
+  Scenario: Sum 1 negative and 1 positive integers
+    Given two int -1 and 3 to sum
+    When computing sum
+    Then it should be 2
+```
+
+* Define the corresponding steps
+
+
+```java
+public class SumSteps {
+
+    Sum moSum;
+    int miSum;
+
+    @Given("^two int (-?\\d+) and (-?\\d+) to sum$")
+    public void twoIntToSum(final int a, final int b) {
+        moSum = new Sum(a, b);
+    }
+
+    @When("^computing sum$")
+    public void computingSum() throws ConcurrentException {
+        miSum = moSum.getSum();
+    }
+
+    @Then("^it should be (-?\\d+)$")
+    public void itShouldBe(final int expected) {
+        Assert.assertEquals(expected, miSum);
+    }
+}
+```
+
+* Define the runner
+
+
+```java
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        features = "src/test/resources/"
+)
+public class SumTestRunner {
+}
+```
+
+#### JGiven
 
 - <http://jgiven.org/>
 
