@@ -37,6 +37,7 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
     + [Robotium](#robotium)
     + [Espresso](#espresso)
     + [Robolectric](#robolectric)
+    + [Cucumber support](#cucumber-support)
     + [JGiven support](#jgiven-support)
   * [IDE configuration](#ide-configuration)
 - [Nota Bene](#nota-bene)
@@ -253,7 +254,7 @@ public class HCRSumTest {
 
 - <https://cucumber.io/>
 
-* Define the `.feature` file
+* Define the `.feature` file:
 
 ```gherkin
 Feature: Sum computation
@@ -274,7 +275,7 @@ Feature: Sum computation
     Then it should be 2
 ```
 
-* Define the corresponding steps
+* Define the corresponding steps:
 
 ```java
 public class SumSteps {
@@ -299,7 +300,7 @@ public class SumSteps {
 }
 ```
 
-* Define the runner
+* Define the specific runner:
 
 ```java
 @RunWith(Cucumber.class)
@@ -309,6 +310,8 @@ public class SumSteps {
 public class SumTestRunner {
 }
 ```
+
+* Relevant tool to write Gherkin features: [Tidy Gherkin](https://chrome.google.com/webstore/detail/tidy-gherkin/nobemmencanophcnicjhfhnjiimegjeo?hl=en-GB)
 
 #### JGiven
 
@@ -495,6 +498,91 @@ public class RobolectricMainActivityTest {
         });
     }
 
+}
+```
+
+### Cucumber support
+
+- <https://github.com/cucumber/cucumber-jvm/tree/master/examples/android>
+
+* Configure the `build.gradle` file:
+
+```groovy
+android {
+    defaultConfig {
+        testApplicationId "com.guddy.android_testing_box.ui"
+        testInstrumentationRunner "com.guddy.android_testing_box.ui.CucumberInstrumentationRunner"
+    }
+    
+    sourceSets {
+        androidTest {
+            assets.srcDirs = ['src/androidTest/assets']
+        }
+    }
+}
+```
+
+* Write features in the `src/androidTest/assets` directory, for example this `main.feature` file:
+
+```gherkin
+Feature: Main activity
+
+  Scenario: Click on the button
+    Given the initial state is shown
+    When clicking on the button
+    Then the text changed to "Text changed after button click"
+```
+
+* Define the corresponding steps:
+
+```java
+@CucumberOptions(features = "features")
+public class CucumberMainActivitySteps extends ActivityInstrumentationTestCase2<MainActivity> {
+
+    public CucumberMainActivitySteps() {
+        super(MainActivity.class);
+    }
+
+    @Given("^the initial state is shown$")
+    public void the_initial_main_activity_is_shown() {
+        // Call the activity before each test.
+        getActivity();
+    }
+
+    @When("^clicking on the button$")
+    public void clicking_the_Click_Me_button() {
+        onView(withId(R.id.ActivityMain_Button)).perform(click());
+    }
+
+    @Then("^the text changed to \"([^\"]*)\"$")
+    public void text_$_is_shown(final String s) {
+        onView(withId(R.id.ActivityMain_TextView)).check(matches(withText(s)));
+    }
+}
+```
+
+* Define the specific runner:
+
+```java
+public class CucumberInstrumentationRunner extends MonitoringInstrumentation {
+
+    private final CucumberInstrumentationCore mInstrumentationCore = new CucumberInstrumentationCore(this);
+
+    @Override
+    public void onCreate(Bundle arguments) {
+        super.onCreate(arguments);
+
+        mInstrumentationCore.create(arguments);
+        start();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        waitForIdleSync();
+        mInstrumentationCore.start();
+    }
 }
 ```
 

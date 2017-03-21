@@ -23,7 +23,9 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testApplicationId "com.guddy.android_testing_box.ui"
+        testInstrumentationRunner "com.guddy.android_testing_box.ui.CucumberInstrumentationRunner"
         multiDexEnabled true
     }
 
@@ -41,6 +43,7 @@ android {
         }
         androidTest {
             java.srcDir sharedTestDir
+            assets.srcDirs = ['src/androidTest/assets']
         }
 
         main.java.srcDirs += 'src/main/kotlin'
@@ -51,6 +54,19 @@ android {
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-media-compat:25.1.1'
+        resolutionStrategy.force 'com.android.support:support-core-ui:25.1.1'
+        resolutionStrategy.force 'com.android.support:support-core-utils:25.1.1'
+        resolutionStrategy.force 'com.android.support:support-vector-drawable:25.1.1'
+        resolutionStrategy.force 'com.android.support:appcompat-v7:25.1.1'
+        resolutionStrategy.force 'com.android.support:support-fragment:25.1.1'
+        resolutionStrategy.force 'com.android.support:support-compat:25.1.1'
+        resolutionStrategy.force 'com.android.support:animated-vector-drawable:25.1.1'
+        resolutionStrategy.force 'com.android.support:support-v4:25.1.1'
+        resolutionStrategy.force 'com.android.support:support-annotations:25.1.1'
     }
 }
 
@@ -63,7 +79,7 @@ dependencies {
 
     compile 'com.android.support:multidex:1.0.1'
 
-    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:appcompat-v7:25.1.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
 
@@ -112,6 +128,8 @@ dependencies {
     }
     androidTestCompile 'com.google.truth:truth:0.32'
     androidTestCompile 'de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1'
+    androidTestCompile 'info.cukes:cucumber-android:1.2.0@jar'
+    androidTestCompile 'info.cukes:cucumber-picocontainer:1.2.0'
 }
 
 // jgiven for unit testing

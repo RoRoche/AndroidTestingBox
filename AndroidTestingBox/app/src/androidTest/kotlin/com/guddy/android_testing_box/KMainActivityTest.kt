@@ -4,8 +4,6 @@ import android.content.Context
 import android.support.test.InstrumentationRegistry
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
-import com.guddy.android_testing_box.MainActivity
-import com.guddy.android_testing_box.R
 import com.robotium.solo.Solo
 import org.junit.After
 import org.junit.Assert.assertTrue
