@@ -9,6 +9,44 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 [![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23242-green.svg)](http://androidweekly.net/issues/issue-242)
 [![Dependency Status](https://www.versioneye.com/user/projects/58b85f8401b5b7003a2129e7/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58b85f8401b5b7003a2129e7)
 
+<!-- toc -->
+
+  * [AndroidTestingBox in the news](#androidtestingbox-in-the-news)
+  * [System under test (SUT)](#system-under-test-sut)
+    + [Simple Java class](#simple-java-class)
+    + [Android `Activity`](#android-activity)
+  * [JUnit](#junit)
+    + [Fluent assertions: truth](#fluent-assertions-truth)
+      - [Alternative: AssertJ](#alternative-assertj)
+    + [Frutilla](#frutilla)
+    + [Fluent test method names](#fluent-test-method-names)
+    + [Specifications framework: Spectrum](#specifications-framework-spectrum)
+      - [Alternative: Oleaster](#alternative-oleaster)
+    + [Hierarchies in JUnit: junit-hierarchicalcontextrunner](#hierarchies-in-junit-junit-hierarchicalcontextrunner)
+    + [BDD tools](#bdd-tools)
+      - [Cucumber](#cucumber)
+      - [JGiven](#jgiven)
+    + [Mutation testing: Zester plugin](#mutation-testing-zester-plugin)
+  * [Kotlin](#kotlin)
+    + [Fluent assertions: Kluent](#fluent-assertions-kluent)
+      - [Alternative: Expekt](#alternative-expekt)
+    + [Specifications framework: Spek](#specifications-framework-spek)
+    + [Alternative to JUnit: TestNG](#alternative-to-junit-testng)
+  * [Android](#android)
+    + [Fluent assertions: AssertJ Android](#fluent-assertions-assertj-android)
+    + [Robotium](#robotium)
+    + [Espresso](#espresso)
+    + [Robolectric](#robolectric)
+    + [JGiven support](#jgiven-support)
+  * [IDE configuration](#ide-configuration)
+- [Nota Bene](#nota-bene)
+- [Bibliography](#bibliography)
+- [Interesting repositories](#interesting-repositories)
+- [Interesting articles](#interesting-articles)
+- [Resources](#resources)
+
+<!-- tocstop -->
+
 ## AndroidTestingBox in the news
 
 * [Android Weekly #242](http://androidweekly.net/issues/issue-242)
@@ -92,7 +130,9 @@ class MainActivity : AppCompatActivity() {
 
 - <https://google.github.io/truth/>
 
-#### Alternative: AssertJ (<http://joel-costigliola.github.io/assertj/>)
+#### Alternative: AssertJ
+
+* <http://joel-costigliola.github.io/assertj/>
 
 ### Frutilla
 
@@ -154,7 +194,9 @@ public class SpectrumSumTest {
 }
 ```
 
-#### Alternative: Oleaster (<https://github.com/mscharhag/oleaster>)
+#### Alternative: Oleaster 
+
+* <https://github.com/mscharhag/oleaster>
 
 ### Hierarchies in JUnit: junit-hierarchicalcontextrunner
 
@@ -234,7 +276,6 @@ Feature: Sum computation
 
 * Define the corresponding steps
 
-
 ```java
 public class SumSteps {
 
@@ -259,7 +300,6 @@ public class SumSteps {
 ```
 
 * Define the runner
-
 
 ```java
 @RunWith(Cucumber.class)
@@ -329,7 +369,9 @@ It generates an HTML report in the `build/reports/zester/` directory, showing th
 
 - <https://github.com/MarkusAmshove/Kluent>
 
-#### Alternative: Expekt (<https://github.com/winterbe/expekt>)
+#### Alternative: Expekt
+
+* <https://github.com/winterbe/expekt>
 
 ### Specifications framework: Spek
 
@@ -355,7 +397,9 @@ class SpekSumTest : Spek({
 })
 ```
 
-### Alternative to JUnit: TestNG (<http://testng.org/doc/index.html>)
+### Alternative to JUnit: TestNG
+
+* <http://testng.org/doc/index.html>
 
 ## Android
 
