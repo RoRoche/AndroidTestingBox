@@ -27,11 +27,11 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
       - [Cucumber](#cucumber)
       - [JGiven](#jgiven)
     + [Mutation testing: Zester plugin](#mutation-testing-zester-plugin)
+    + [Alternative to JUnit: TestNG](#alternative-to-junit-testng)
   * [Kotlin](#kotlin)
     + [Fluent assertions: Kluent](#fluent-assertions-kluent)
       - [Alternative: Expekt](#alternative-expekt)
     + [Specifications framework: Spek](#specifications-framework-spek)
-    + [Alternative to JUnit: TestNG](#alternative-to-junit-testng)
   * [Android](#android)
     + [Fluent assertions: AssertJ Android](#fluent-assertions-assertj-android)
     + [Robotium](#robotium)
@@ -363,6 +363,10 @@ Test class: com.guddy.android_testing_box.zester.ZesterExampleTest
 
 It generates an HTML report in the `build/reports/zester/` directory, showing that 2 "mutants" survived to unit tests (so potential bugs, and in this case, yes it is).
 
+### Alternative to JUnit: TestNG
+
+* <http://testng.org/doc/index.html>
+
 ## Kotlin 
 
 ### Fluent assertions: Kluent
@@ -396,10 +400,6 @@ class SpekSumTest : Spek({
     }
 })
 ```
-
-### Alternative to JUnit: TestNG
-
-* <http://testng.org/doc/index.html>
 
 ## Android
 
