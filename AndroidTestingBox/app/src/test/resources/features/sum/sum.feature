@@ -1,16 +1,12 @@
 Feature: Sum computation
 
-  Scenario: Sum 2 positive integers
-    Given two int 1 and 3 to sum
+  Scenario Outline: Sum 2 integers
+    Given two int <a> and <b> to sum
     When computing sum
-    Then it should be 4
+    Then it should be <sum>
 
-  Scenario: Sum 2 negative integers
-    Given two int -1 and -3 to sum
-    When computing sum
-    Then it should be -4
-
-  Scenario: Sum 1 negative and 1 positive integers
-    Given two int -1 and 3 to sum
-    When computing sum
-    Then it should be 2
+    Examples:
+      |  a |  b | sum |
+      |  1 |  3 |   4 |
+      | -1 | -3 |  -4 |
+      | -1 |  3 |   2 |

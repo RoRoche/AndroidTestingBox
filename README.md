@@ -311,7 +311,10 @@ public class SumTestRunner {
 }
 ```
 
-* Relevant tool to write Gherkin features: [Tidy Gherkin](https://chrome.google.com/webstore/detail/tidy-gherkin/nobemmencanophcnicjhfhnjiimegjeo?hl=en-GB)
+* Relevant tools:
+    * to write Gherkin features: [Tidy Gherkin](https://chrome.google.com/webstore/detail/tidy-gherkin/nobemmencanophcnicjhfhnjiimegjeo?hl=en-GB)
+    * to display Gherkin features in Chrome a way pretty way: [Pretty Gherkin](https://chrome.google.com/webstore/detail/pretty-gherkin/blemhogdenfkkojlpghcinocbfjheioc?hl=en-GB)
+    * to generating specifications from Gherkin source files: [featurebook](https://www.npmjs.com/package/featurebook)
 
 #### JGiven
 
