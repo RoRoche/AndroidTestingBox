@@ -9,6 +9,11 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 [![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23242-green.svg)](http://androidweekly.net/issues/issue-242)
 [![Dependency Status](https://www.versioneye.com/user/projects/58b85f8401b5b7003a2129e7/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58b85f8401b5b7003a2129e7)
 
+<!-- 
+run the following command line:
+markdown-toc -i README.md
+-->
+
 <!-- toc -->
 
   * [AndroidTestingBox in the news](#androidtestingbox-in-the-news)
@@ -23,6 +28,7 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
     + [Specifications framework: Spectrum](#specifications-framework-spectrum)
       - [Alternative: Oleaster](#alternative-oleaster)
     + [Hierarchies in JUnit: junit-hierarchicalcontextrunner](#hierarchies-in-junit-junit-hierarchicalcontextrunner)
+      - [Novelty to consider: JUnit 5 Nested Tests](#novelty-to-consider-junit-5-nested-tests)
     + [BDD tools](#bdd-tools)
       - [Cucumber](#cucumber)
       - [JGiven](#jgiven)
@@ -248,6 +254,11 @@ public class HCRSumTest {
 }
 ```
 
+#### Novelty to consider: JUnit 5 Nested Tests
+
+- <http://junit.org/junit5/docs/current/user-guide/#writing-tests-nested>
+- The `@Nested` and `@DisplayName` annotations allow developers to reach an elegant "given/when/then" canvas
+
 ### BDD tools
 
 #### Cucumber
@@ -259,27 +270,22 @@ public class HCRSumTest {
 ```gherkin
 Feature: Sum computation
 
-  Scenario: Sum 2 positive integers
-    Given two int 1 and 3 to sum
+  Scenario Outline: Sum 2 integers
+    Given two int <a> and <b> to sum
     When computing sum
-    Then it should be 4
+    Then it should be <sum>
 
-  Scenario: Sum 2 negative integers
-    Given two int -1 and -3 to sum
-    When computing sum
-    Then it should be -4
-
-  Scenario: Sum 1 negative and 1 positive integers
-    Given two int -1 and 3 to sum
-    When computing sum
-    Then it should be 2
+    Examples:
+      |  a |  b | sum |
+      |  1 |  3 |   4 |
+      | -1 | -3 |  -4 |
+      | -1 |  3 |   2 |
 ```
 
 * Define the corresponding steps:
 
 ```java
 public class SumSteps {
-
     Sum moSum;
     int miSum;
 
