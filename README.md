@@ -677,6 +677,7 @@ A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mocki
 
 - <https://www.philosophicalhacker.com/post/some-resources-for-learning-how-to-test-android-apps/>
 - <https://www.sitepoint.com/property-based-testing-with-javaslang/>
+- <https://medium.com/@fabioCollini/android-testing-using-dagger-2-mockito-and-a-custom-junit-rule-c8487ed01b56>
 
 # Resources
 
