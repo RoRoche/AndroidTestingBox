@@ -672,6 +672,7 @@ A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mocki
 - <https://github.com/googlesamples/android-testing>
 - <https://github.com/TNG/JGiven/tree/master/jgiven-examples>
 - <https://github.com/ahus1/bdd-examples>
+- <https://github.com/chiuki/android-test-demo>
 
 # Interesting articles
 
