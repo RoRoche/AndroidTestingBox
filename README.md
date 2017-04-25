@@ -13,41 +13,42 @@ The idea is to provide a toolbox to write elegant and intelligible tests, with m
 
 <!-- toc -->
 
-  * [AndroidTestingBox in the news](#androidtestingbox-in-the-news)
-  * [System under test (SUT)](#system-under-test-sut)
-    + [Simple Java class](#simple-java-class)
-    + [Android `Activity`](#android-activity)
-  * [JUnit](#junit)
-    + [Fluent assertions: truth](#fluent-assertions-truth)
-      - [Alternative: AssertJ](#alternative-assertj)
-    + [Frutilla](#frutilla)
-    + [Fluent test method names](#fluent-test-method-names)
-    + [Specifications framework: Spectrum](#specifications-framework-spectrum)
-      - [Alternative: Oleaster](#alternative-oleaster)
-    + [Hierarchies in JUnit: junit-hierarchicalcontextrunner](#hierarchies-in-junit-junit-hierarchicalcontextrunner)
-      - [Novelty to consider: JUnit 5 Nested Tests](#novelty-to-consider-junit-5-nested-tests)
-    + [BDD tools](#bdd-tools)
-      - [Cucumber](#cucumber)
-      - [JGiven](#jgiven)
-    + [Mutation testing: Zester plugin](#mutation-testing-zester-plugin)
-    + [Alternative to JUnit: TestNG](#alternative-to-junit-testng)
-  * [Kotlin](#kotlin)
-    + [Fluent assertions: Kluent](#fluent-assertions-kluent)
-      - [Alternative: Expekt](#alternative-expekt)
-    + [Specifications framework: Spek](#specifications-framework-spek)
-  * [Android](#android)
-    + [Fluent assertions: AssertJ Android](#fluent-assertions-assertj-android)
-    + [Robotium](#robotium)
-    + [Espresso](#espresso)
-    + [Robolectric](#robolectric)
-    + [Cucumber support](#cucumber-support)
-    + [JGiven support](#jgiven-support)
-  * [IDE configuration](#ide-configuration)
+- [AndroidTestingBox in the news](#androidtestingbox-in-the-news)
+- [System under test (SUT)](#system-under-test-sut)
+  * [Simple Java class](#simple-java-class)
+  * [Android `Activity`](#android-activity)
+- [JUnit](#junit)
+  * [Fluent assertions: truth](#fluent-assertions-truth)
+    + [Alternative: AssertJ](#alternative-assertj)
+  * [Frutilla](#frutilla)
+  * [Fluent test method names](#fluent-test-method-names)
+  * [Specifications framework: Spectrum](#specifications-framework-spectrum)
+    + [Alternative: Oleaster](#alternative-oleaster)
+  * [Hierarchies in JUnit: junit-hierarchicalcontextrunner](#hierarchies-in-junit-junit-hierarchicalcontextrunner)
+    + [Novelty to consider: JUnit 5 Nested Tests](#novelty-to-consider-junit-5-nested-tests)
+  * [BDD tools](#bdd-tools)
+    + [Cucumber](#cucumber)
+    + [JGiven](#jgiven)
+  * [Mutation testing: Zester plugin](#mutation-testing-zester-plugin)
+  * [Alternative to JUnit: TestNG](#alternative-to-junit-testng)
+- [Kotlin](#kotlin)
+  * [Fluent assertions: Kluent](#fluent-assertions-kluent)
+    + [Alternative: Expekt](#alternative-expekt)
+  * [Specifications framework: Spek](#specifications-framework-spek)
+- [Android](#android)
+  * [Fluent assertions: AssertJ Android](#fluent-assertions-assertj-android)
+  * [Robotium](#robotium)
+  * [Espresso](#espresso)
+  * [Robolectric](#robolectric)
+  * [Cucumber support](#cucumber-support)
+  * [JGiven support](#jgiven-support)
+- [IDE configuration](#ide-configuration)
 - [Nota Bene](#nota-bene)
 - [Bibliography](#bibliography)
 - [Interesting repositories](#interesting-repositories)
 - [Interesting articles](#interesting-articles)
 - [Resources](#resources)
+- [Logo credits](#logo-credits)
 
 <!-- tocstop -->
 
@@ -657,31 +658,35 @@ public class EspressoJGivenMainActivityTest extends
 
 - MoreUnit plugin:  <https://plugins.jetbrains.com/plugin/7105>
 
-# Nota Bene
+## Nota Bene
 
 A relevant combination of [Dagger2](https://google.github.io/dagger/) and [mockito](http://site.mockito.org/) is already described in a previous post I wrote: <http://roroche.github.io/AndroidStarter/>
 
-# Bibliography
+## Bibliography
 
 - <https://blog.codecentric.de/en/2016/01/writing-better-tests-junit/>
 - <https://www.petrikainulainen.net/programming/unit-testing/3-reasons-why-we-should-not-use-inheritance-in-our-tests/>
 - <http://blog.xebia.com/mutation-testing-how-good-are-your-unit-tests/>
 
-# Interesting repositories
+## Interesting repositories
 
 - <https://github.com/googlesamples/android-testing>
 - <https://github.com/TNG/JGiven/tree/master/jgiven-examples>
 - <https://github.com/ahus1/bdd-examples>
 - <https://github.com/chiuki/android-test-demo>
 
-# Interesting articles
+## Interesting articles
 
 - <https://www.philosophicalhacker.com/post/some-resources-for-learning-how-to-test-android-apps/>
 - <https://www.sitepoint.com/property-based-testing-with-javaslang/>
 - <https://medium.com/@fabioCollini/android-testing-using-dagger-2-mockito-and-a-custom-junit-rule-c8487ed01b56>
 - <https://offbeattesting.com/2017/04/13/unit-test/>
 
-# Resources
+## Resources
 
 - <https://www.petrikainulainen.net/writing-clean-tests/>
 - <https://www.petrikainulainen.net/category/weekly/>
+
+## Logo credits
+
+Science graphic by <a href="http://www.flaticon.com/authors/pixel-perfect">Pixel perfect</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a>
